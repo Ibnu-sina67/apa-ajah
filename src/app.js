@@ -1,11 +1,53 @@
 document.addEventListener('alpine:init', () => {
     Alpine.data('products', () => ({
         items: [
-            { id: 1, name: 'Mie Ayam', img: '1.jpg', price: 10000 },
-            { id: 2, name: 'Bakso', img: '2.jpg', price: 10000 },
-            { id: 3, name: 'Mie Ayam Bakso', img: '3.jpg', price: 16000 },
-            { id: 4, name: 'Mie Ayam Jamur', img: '4.jpg', price: 16000 },
-        ],
+{ 
+id: 1,
+name: 'Mie Ayam',
+img: '1.jpg',
+price: 6000,
+stars: 4,
+desc: 'Mie ayam gurih dengan topping ayam manis dan kuah kaldu yang hangat.'
+},
+
+{ 
+id: 2,
+name: 'Bakso',
+img: '2.jpg',
+price: 10000,
+stars: 1,
+desc: 'Bakso kenyal dengan kuah kaldu sapi yang segar dan nikmat.'
+},
+
+{ 
+id: 3,
+name: 'Mie Ayam Bakso',
+img: '3.jpg',
+price: 16000,
+stars: 5,
+desc: 'Perpaduan mie ayam gurih dan bakso kenyal yang membuat rasa semakin lengkap.'
+},
+
+{ 
+id: 4,
+name: 'Mie Ayam Jamur',
+img: '4.jpg',
+price: 1600000,
+stars: 4,
+desc: 'Mie ayam dengan topping jamur spesial yang memberikan rasa lebih kaya.'
+}
+],
+
+        activeItem: null,
+
+        showDetail(item){
+            this.activeItem = item
+            document.querySelector('#item-detail-modal').style.display = 'flex'
+
+            this.$nextTick(() => {
+                feather.replace()
+            })
+        }
     }));
 
     Alpine.store('cart', {
@@ -92,9 +134,29 @@ checkoutButton.addEventListener('click', function(e) {
     e.preventDefault();
     const formData = new FormData(form);
     const data = new URLSearchParams(formData);
-    const objData = Object.fromEntries(data).items;
-    console.log(objData);
+    const objData = Object.fromEntries(data);
+    const message = formatMessage(objData);
+    window.open('https://wa.me/6285701884893?text=' + encodeURIComponent(message));
 });
+
+// Reset Forfm
+form.reset();
+
+// nonaktifkan tombol lagi
+checkoutButton.disabled = true;
+
+// format pesan wassap
+const formatMessage = (obj) => {
+    return`Data Custamer
+        Nama: ${obj.name}
+        Email: ${obj.email}
+        No HP: ${obj.phone}
+        Location: ${obj.location}
+Data Pesanan
+    ${JSON.parse(obj.items).map((item) => `${item.name} (${item.quantity} x ${rupiah(item.total)}) \n`)}
+TOTAL: ${rupiah(obj.total)}
+Terima Kasih.`;
+}
 
 // konversi rupiah
 const rupiah = (number) => {
@@ -104,3 +166,25 @@ const rupiah = (number) => {
         minimumFractionDigits: 0,
     }).format(number);
 };
+
+// untuk tombol kirim pesan dikontak kami
+function kirimWA(event) {
+    event.preventDefault();
+
+    const nama = document.getElementById("nama").value;
+    const email = document.getElementById("email").value;
+    const hp = document.getElementById("hp").value;
+
+    const nomorWA = "6285701884893";
+
+    const pesan = `Halo, saya ingin bertanya
+
+Nama: ${nama}
+Email: ${email}
+No HP: ${hp}
+Email: ${location}`;
+
+    const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
+
+    window.open(url, "_blank");
+}

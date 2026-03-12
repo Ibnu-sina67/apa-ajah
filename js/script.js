@@ -44,13 +44,11 @@ document.addEventListener("click", function (e) {
 
 // Modal Box
 const itemDetailModal = document.querySelector('#item-detail-modal');
-const itemDetailButtons = document.querySelectorAll('.item-detail-button');
-
-itemDetailButtons.forEach((btn) => {
-  btn.onclick = (e) => {
-    itemDetailModal.style.display = 'flex';
+document.addEventListener("click", function(e) {
+  if(e.target.closest(".item-detail-button")) {
     e.preventDefault();
-  };
+    itemDetailModal.style.display = "flex";
+  }
 });
 
 
@@ -66,3 +64,27 @@ itemDetailModal.onclick = (e) => {
     itemDetailModal.style.display = 'none';
   }
 };
+
+// tombol add to cart dari modal
+const modalAddCart = document.querySelector('#modal-add-cart');
+
+modalAddCart.addEventListener('click', function(e){
+  e.preventDefault();
+
+  // contoh ambil produk pertama (sementara)
+  const product = {
+    id: 1,
+    name: "Mie Ayam",
+    img: "1.jpg",
+    price: 10000
+  };
+
+  // tambahkan ke cart
+  Alpine.store('cart').add(product);
+
+  // tutup modal
+  itemDetailModal.style.display = "none";
+
+  // buka shopping cart
+  shoppingCart.classList.add('active');
+});

@@ -6,7 +6,7 @@
     <title>Mie Ayam Kami</title>
 
     <!-- logo web -->
-    <link rel="shortcut icon" href="/img/logo.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="/mie/mie-logo.jpeg" type="image/x-icon">
 
     <!-- feather icon -->
     <script script src="https://unpkg.com/feather-icons"></script>
@@ -30,7 +30,7 @@
 
     <!--Navbar start-->
     <nav class="navbar" x-data>
-        <a href="#" class="navbar-logo">Apa<span>ajah.</span></a>
+        <a href="#" class="navbar-logo">Mie<span>Nusantara</span></a>
 
         <div class="navbar-nav">
             <a href="#home">Home</a>
@@ -84,18 +84,23 @@
 
 
                     <label for="name">
-                        <span>Name</span>
+                        <span>Name:</span>
                         <input type="text" name="name" id="name">
                     </label>
 
                     <label for="email">
-                        <span>Email</span>
+                        <span>Email:</span>
                         <input type="email" name="email" id="email">
                     </label>
 
                     <label for="phone">
-                        <span>Phone</span>
+                        <span>Phone:</span>
                         <input type="number" name="phone" id="phone" autocomplete="off">
+                    </label>
+
+                    <label for="location">
+                        <span>Location:</span>
+                        <input type="location" name="location" id="location" autocomplete="off">
                     </label>
 
                     <button class="checkout-button disabled" type="submit" id="checkout-button" value="checkout">Checkout</button>
@@ -110,8 +115,10 @@
     <!-- hero section star -->
     <section class="hero" id="home">
         <main class="content">
-            <h1>Mari Nikmati Secangkir <span>Kopi</span></h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi sapiente illo inventore non iure suscipit tempore sit debitis amet, vitae adipisci tempora sed culpa, sint facilis. Expedita laboriosam veniam aspernatur.</p>
+            <h1>Mari Nikmati Semangkok <span>Mie Ayam</span></h1>
+            <p>Hidup di Indonesia kadang penuh cerita. Dari macet di jalan, tugas yang datang tiba-tiba, sampai candaan receh bersama teman. Tapi di tengah semua itu, semangkok mie ayam hangat selalu jadi pelipur sederhana yang membuat hari terasa lebih nikmat.</p>
+        
+        <a href="#products" class="cta">Beli Sekarang</a>
         </main>
     </section>
     <!-- hero ssection end -->
@@ -122,12 +129,12 @@
 
         <div class="row">
             <div class="about-img">
-                <img src="img/2.jpeg" alt="Tentang Kami">
+                <img src="mie/mie-kami-640x427.jpg" alt="Tentang Kami">
             </div>
             <div class="content">
-                <h3>Kenapa Memilih Kopi Kami?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus qui illum odio, delectus aut nam!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi illum autem consequuntur architecto accusamus expedita quos nulla dolorem porro assumenda.</p>
+                <h3>Kenapa Memilih Mie Kami?</h3>
+                <p>Kami hadir untuk menghadirkan semangkok mie ayam yang sederhana namun penuh kehangatan. Dengan mie yang kenyal, ayam berbumbu gurih, dan aroma kuah yang khas, setiap hidangan kami dibuat untuk memberikan rasa nikmat yang selalu dirindukan.</p>
+                <p>Di tengah kesibukan dan cerita sehari-hari, kami percaya bahwa semangkok mie ayam hangat bisa menjadi teman yang pas untuk menikmati momen kecil yang menyenangkan.</p>
             </div>
         </div>
     </section>
@@ -136,48 +143,38 @@
     <!-- menu section start -->
     <section id="menu" class="menu">
         <h2><span>Menu</span> Kami</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, minus excepturi? Possimus aperiam earum.</p>
+        <p>Temukan berbagai pilihan mie ayam dengan rasa gurih yang khas, siap menemani waktu santaimu.</p>
 
         <div class="row">
             <div class="menu-card">
-                <img src="img/menu/menu1.jpg" alt="Espresso" class="menu-card-img">
-                <h3 class="menu-card-title">- Espresso -</h3>
-                <p class="menu-card-price">IDR 15K</p>
+                <img src="img/menu/menu1.jpg" alt="Mie Ayam" class="menu-card-img">
+                <h3 class="menu-card-title">- Mie Ayam -</h3>
+                <p class="menu-card-price">Rp 10000</p>
             </div>
             <div class="menu-card">
-                <img src="img/menu/menu1.jpg" alt="Espresso" class="menu-card-img">
-                <h3 class="menu-card-title">- Espresso -</h3>
-                <p class="menu-card-price">IDR 15K</p>
+                <img src="img/menu/menu1.jpg" alt="Bakso" class="menu-card-img">
+                <h3 class="menu-card-title">- Bakso -</h3>
+                <p class="menu-card-price">Rp 10000</p>
             </div>
             <div class="menu-card">
-                <img src="img/menu/menu1.jpg" alt="Espresso" class="menu-card-img">
-                <h3 class="menu-card-title">- Espresso -</h3>
-                <p class="menu-card-price">IDR 15K</p>
+                <img src="img/menu/menu1.jpg" alt="Mie Ayam Bakso" class="menu-card-img">
+                <h3 class="menu-card-title">- Mie Ayam Bakso -</h3>
+                <p class="menu-card-price">Rp 16000</p>
             </div>
             <div class="menu-card">
-                <img src="img/menu/menu1.jpg" alt="Espresso" class="menu-card-img">
-                <h3 class="menu-card-title">- Espresso -</h3>
-                <p class="menu-card-price">IDR 15K</p>
+                <img src="img/menu/menu1.jpg" alt="Mie Ayam Jamur" class="menu-card-img">
+                <h3 class="menu-card-title">- Mie Ayam Jamur -</h3>
+                <p class="menu-card-price">Rp 16000</p>
             </div>
             <div class="menu-card">
-                <img src="img/menu/menu1.jpg" alt="Espresso" class="menu-card-img">
-                <h3 class="menu-card-title">- Espresso -</h3>
-                <p class="menu-card-price">IDR 15K</p>
+                <img src="img/menu/menu1.jpg" alt="Mie Ayam Isekai" class="menu-card-img">
+                <h3 class="menu-card-title">- Mie Ayam Isekai -</h3>
+                <p class="menu-card-price">Rp 100000</p>
             </div>
             <div class="menu-card">
-                <img src="img/menu/menu1.jpg" alt="Espresso" class="menu-card-img">
-                <h3 class="menu-card-title">- Espresso -</h3>
-                <p class="menu-card-price">IDR 15K</p>
-            </div>
-            <div class="menu-card">
-                <img src="img/menu/menu1.jpg" alt="Espresso" class="menu-card-img">
-                <h3 class="menu-card-title">- Espresso -</h3>
-                <p class="menu-card-price">IDR 15K</p>
-            </div>
-            <div class="menu-card">
-                <img src="img/menu/menu1.jpg" alt="Espresso" class="menu-card-img">
-                <h3 class="menu-card-title">- Espresso -</h3>
-                <p class="menu-card-price">IDR 15K</p>
+                <img src="img/menu/menu1.jpg" alt="Mie Doang" class="menu-card-img">
+                <h3 class="menu-card-title">- Mie Doang -</h3>
+                <p class="menu-card-price">Rp 6000</p>
             </div>
         </div>
     </section>
@@ -197,7 +194,7 @@
                         <use href="img/feather-sprite.svg#shopping-cart" />
                     </svg>
                 </a>
-                <a href="#" class="item-detail-button">
+                <a href="#" class="item-detail-button" @click.prevent="showDetail(item)">
                     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <use href="img/feather-sprite.svg#eye" />
                     </svg>
@@ -209,27 +206,35 @@
                 <div class="product-content">
                     <h3 x-text="item.name"></h3>
                     <div class="product-stars">
-                    <svg width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <use href="img/feather-sprite.svg#star" />
-                    </svg>
-                    <svg width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <use href="img/feather-sprite.svg#star" />
-                    </svg>
-                    <svg width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <use href="img/feather-sprite.svg#star" />
-                    </svg>
-                    <svg width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <use href="img/feather-sprite.svg#star" />
-                    </svg>
-                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <use href="img/feather-sprite.svg#star" />
-                    </svg>
+                        <template x-for="i in 5" :key="i">
+                            <svg width="24" height="24" :fill="i <= item.stars ? 'currentColor' : 'none'" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"></polygon></svg>
+                        </template>
                     </div>
                     <div class="product-price"><span x-text="rupiah(item.price)"></span></div>
                 </div>
         </div>
         </template>
     </div>
+
+    <!-- Modal Box Item Detil Start -->
+    <div class="modal" id="item-detail-modal" x-show="openModal">
+        <div class="modal-container">
+            <a href="#" class="close-icon"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img :src="`img/products/${activeItem?.img}`" :alt="activeItem?.name">
+                <div class="product-content">
+                    <h3 x-text="activeItem?.name"></h3>
+                    <p x-text="activeItem?.desc"></p>
+                    <div class="product-price"><span x-text="rupiah(activeItem.price)"></span></div>
+                        <a href="#" @click.prevent="$store.cart.add(activeItem); document.querySelector('#item-detail-modal').style.display='none'; document.querySelector('.shopping-cart').classList.add('active')">
+                            <i data-feather="shopping-cart"></i>
+                            <span>Add to Cart</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     </section>
 
 
@@ -243,18 +248,22 @@
         
         <div class="row">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7735475.851140815!2d106.71474031731498!3d-5.151362775594202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e751fc11165d059%3A0xcc8292d557cc9f77!2sLaut%20Jawa!5e1!3m2!1sid!2sid!4v1772441593939!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
-            <form action="form">
+            <form onsubmit="kirimWA(event)">
             <div class="input-group">
                 <i data-feather="user"></i>
-                <input type="text" placeholder="Nama">
+                <input type="text" id="nama" placeholder="Nama">
             </div>
             <div class="input-group">
                 <i data-feather="mail"></i>
-                <input type="text" placeholder="Email">
+                <input type="text" id="email" placeholder="Email">
             </div>
             <div class="input-group">
                 <i data-feather="phone"></i>
-                <input type="text" placeholder="08XXXXXXXX">
+                <input type="text" id="hp" placeholder="08XXXXXXXX">
+            </div>
+            <div class="input-group">
+                <i data-feather="map-pin"></i>
+                <input type="text" id="location" placeholder="Location">
             </div>
             <button type="submit" class="btn">kirim pesan</button>
             </form>
@@ -265,9 +274,13 @@
     <!-- footer start -->
     <footer>
         <div class="socials">
-            <a href="#"><i data-feather="youtube"></i></a>
-            <a href="#"><i data-feather="instagram"></i></a>
-            <a href="#"><i data-feather="facebook"></i></a>
+            <div class="socials">
+                <a href="https://youtube.com/@sandhikagalihWPU" target="_blank">
+                <i data-feather="youtube"></i></a>
+                
+                <a href="https://instagram.com/username_ig" target="_blank">
+                <i data-feather="instagram"></i></a>
+            </div>
         </div>
 
         <div class="links">
@@ -278,7 +291,7 @@
         </div>
 
         <div class="credit">
-            <p>Created by<a href=""> STMIK</a>. | &copy; 2026.</p>
+            <p>Created by<a href=""> Prakerin IWIMA</a>. | &copy; sandhikagalihWPU 2026.</p>
         </div>
 
 
@@ -286,28 +299,7 @@
     </footer>
     <!-- footer end -->
 
-    <!-- Modal Box Item Detil Start -->
-    <div class="modal" id="item-detail-modal">
-        <div class="modal-container">
-            <a href="#" class="close-icon"><i data-feather="x"></i></a>
-            <div class="modal-content">
-                <img src="img/products/p-2.jpg" alt="P1">
-                <div class="product-content">
-                    <h3>Product 1</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit adipisci a quae optio mollitia voluptate, in, fugiat praesentium voluptas quisquam blanditiis assumenda magni aliquid delectus!</p>
-                    <div class="product-stars">
-                        <i  data-feather="star" class="star-full"></i>
-                        <i  data-feather="star" class="star-full"></i>
-                        <i  data-feather="star" class="star-full"></i>
-                        <i  data-feather="star" class="star-full"></i>
-                        <i  data-feather="star"></i>
-                    </div>
-                    <div class="product-price">IDR 30K <span>IDR 55K</span></div>
-                    <a href="#"><i data-feather="shopping-cart"></i> <span>Add to Cart</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- Modal Box Item Detil End -->
     
     <!-- feather icon -->
