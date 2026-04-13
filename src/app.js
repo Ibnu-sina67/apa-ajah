@@ -4,37 +4,37 @@ document.addEventListener('alpine:init', () => {
 { 
 id: 1,
 name: 'Mie Ayam',
-img: '1.jpg',
-price: 6000,
-stars: 4,
+img: 'mie-ayam.jpg',
+price: 10000,
+stars: 5,
 desc: 'Mie ayam gurih dengan topping ayam manis dan kuah kaldu yang hangat.'
 },
 
 { 
 id: 2,
 name: 'Bakso',
-img: '2.jpg',
+img: 'bakso.jpg',
 price: 10000,
-stars: 1,
+stars: 4,
 desc: 'Bakso kenyal dengan kuah kaldu sapi yang segar dan nikmat.'
 },
 
 { 
 id: 3,
 name: 'Mie Ayam Bakso',
-img: '3.jpg',
+img: 'mie-ayam-bakso.jpg',
 price: 16000,
-stars: 5,
+stars: 4,
 desc: 'Perpaduan mie ayam gurih dan bakso kenyal yang membuat rasa semakin lengkap.'
 },
 
 { 
 id: 4,
-name: 'Mie Ayam Jamur',
-img: '4.jpg',
-price: 1600000,
-stars: 4,
-desc: 'Mie ayam dengan topping jamur spesial yang memberikan rasa lebih kaya.'
+name: 'Bakso Mercon Jumbo',
+img: 'bakso-mercon-jumbo.jpg',
+price: 35000,
+stars: 5,
+desc: 'Bakso jumbo isi cabai pedas dengan kuah gurih dan topping yang banyak.'
 }
 ],
 
@@ -182,7 +182,7 @@ function kirimWA(event) {
 Nama: ${nama}
 Email: ${email}
 No HP: ${hp}
-Email: ${location}`;
+Lokasi: ${location}`;
 
     const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
 
